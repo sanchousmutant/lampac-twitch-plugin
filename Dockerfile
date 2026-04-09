@@ -43,6 +43,9 @@ RUN apt-get update && apt-get install -y \
 # Копируем собранное приложение
 COPY --from=build /app/publish .
 
+# Копируем BaseModule для динамической загрузки контроллеров
+COPY --from=build /src/BaseModule /BaseModule
+
 # Копируем конфигурацию
 COPY current.conf ./init.conf
 
