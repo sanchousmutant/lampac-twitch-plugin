@@ -1,0 +1,36 @@
+# --- БРАУЗЕРЫ И ЗАВИСИМОСТИ (Самое тяжелое) ---
+# Игнорируем папку с загруженными браузерами Playwright
+Lampac/.playwright/
+# Если есть папка node_modules (для JS-зависимостей)
+node_modules/
+
+# --- СИСТЕМНЫЕ ФАЙЛЫ LAMPAC ---
+# Логи сервера
+logs/
+*.log
+# Игнорируем ваш рабочий конфиг (в нем могут быть токены или пароли)
+current.conf
+# Временные файлы и кэш
+cache/
+tmp/
+
+# --- СБОРКА .NET (Если Lampac компилируется) ---
+# Игнорируем результаты компиляции
+bin/
+obj/
+publish/
+
+# --- ФАЙЛЫ РЕДАКТОРОВ И ОС ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- РЕЗЕРВНЫЕ КОПИИ ---
+*.bak
+*.tmp
+
+Lampac/.playwright/
+Lampac/bin/
+Lampac/obj/
+current.conf
