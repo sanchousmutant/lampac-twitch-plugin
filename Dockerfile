@@ -49,6 +49,9 @@ COPY --from=build /src/BaseModule /BaseModule
 # Копируем конфигурацию
 COPY current.conf ./init.conf
 
+# Копируем MSX start parameter
+COPY msx.json ./msx.json
+
 # Создаем необходимые директории
 RUN mkdir -p /app/cache /app/runtimes/references
 

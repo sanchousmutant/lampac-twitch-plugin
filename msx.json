@@ -1,0 +1,35 @@
+{
+  "name": "Lampac",
+  "version": "1.0.0",
+  "parameter": "content:{localhost}/msx/start.json",
+  "action": "[settings:validate_links:0|home]",
+  "dictionary": "{localhost}/lampa-main/msx/lang/ru.json",
+  "pages": [
+    {
+      "items": [
+        {
+          "id": "description",
+          "type": "space",
+          "layout": "5,0,5,5",
+          "text": ""
+        },
+        {
+          "type": "control",
+          "layout": "0,0,5,1",
+          "image": "{localhost}/lampa-main/msx-logo.png",
+          "label": "Lampa",
+          "action": "link:{localhost}",
+          "selection": {
+            "important": true,
+            "action": "update:content:description",
+            "data": {
+              "text": [
+                "{txt:msx-white: Lampa}"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
