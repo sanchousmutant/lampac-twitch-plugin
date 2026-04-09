@@ -10,10 +10,10 @@ git clone https://github.com/sanchousmutant/lampac-twitch-plugin
 cd lampac-twitch-plugin
 
 # Запустите
-docker-compose up -d
+docker compose up -d
 
 # Проверьте логи
-docker-compose logs -f
+docker compose logs -f
 ```
 
 Сервер будет доступен на `http://your-server-ip:9118`
@@ -55,8 +55,8 @@ lampac-twitch-plugin/
 
 ```bash
 git pull
-docker-compose down
-docker-compose up -d --build
+docker compose down
+docker compose up -d --build
 ```
 
 ## Порты
@@ -79,14 +79,14 @@ docker-compose logs lampac
 
 ### Перезапуск
 ```bash
-docker-compose restart
+docker compose restart
 ```
 
 ### Полная пересборка
 ```bash
-docker-compose down
-docker-compose build --no-cache
-docker-compose up -d
+docker compose down
+docker compose build --no-cache
+docker compose up -d
 ```
 
 ## Лицензия

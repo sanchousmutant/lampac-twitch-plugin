@@ -3,7 +3,7 @@
 ## Что создано
 
 - `Dockerfile` - образ для сборки Lampac с вашим кодом
-- `docker-compose.yml` - конфигурация для запуска
+- `docker compose.yml` - конфигурация для запуска
 - `.dockerignore` - исключения для оптимизации сборки
 
 ## Подготовка на вашем ПК
@@ -31,13 +31,13 @@ cd lampac-twitch-plugin
 
 ### 4. Запустите через Docker Compose
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ### 5. Проверьте статус
 ```bash
-docker-compose ps
-docker-compose logs -f lampac
+docker compose ps
+docker compose logs -f lampac
 ```
 
 ## Доступ к сервису
@@ -57,21 +57,21 @@ docker-compose logs -f lampac
 ```bash
 cd /path/to/lampac-twitch-plugin
 git pull
-docker-compose down
-docker-compose build --no-cache
-docker-compose up -d
+docker compose down
+docker compose build --no-cache
+docker compose up -d
 ```
 
 ## Остановка
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ## Удаление (с данными)
 
 ```bash
-docker-compose down -v
+docker compose down -v
 ```
 
 ## Альтернатива: Использование готового Dockerfile
@@ -95,14 +95,14 @@ docker run -d \
 
 1. Откройте Portainer в OpenMediaVault
 2. Stacks → Add stack
-3. Вставьте содержимое `docker-compose.yml`
+3. Вставьте содержимое `docker compose.yml`
 4. Deploy
 
 ## Troubleshooting
 
 ### Порт занят
 ```bash
-# Измените порт в docker-compose.yml
+# Измените порт в docker compose.yml
 ports:
   - "9119:9118"  # используйте другой внешний порт
 ```
@@ -114,10 +114,10 @@ sudo chown -R 1000:1000 ./current.conf
 
 ### Логи
 ```bash
-docker-compose logs -f
+docker compose logs -f
 ```
 
 ### Перезапуск
 ```bash
-docker-compose restart
+docker compose restart
 ```
