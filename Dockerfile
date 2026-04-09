@@ -46,8 +46,8 @@ COPY --from=build /app/publish .
 # Копируем конфигурацию
 COPY current.conf ./init.conf
 
-# Создаем директорию для кэша
-RUN mkdir -p /app/cache
+# Создаем необходимые директории
+RUN mkdir -p /app/cache /app/runtimes/references
 
 # Настройка Chromium
 RUN echo '{"chromium":{"executablePath":"/usr/bin/chromium"}}' > chromium.conf
