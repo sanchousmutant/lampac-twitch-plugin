@@ -1,8 +1,0 @@
-у меня на локальном сервере в контейнере lampa. я сделал docker cp twitch_plugin.js 5c16004ca197:/lampac/wwwroot/plugins/twitch_plugin.js
-docker exec -u root 5c16004ca197 chmod 644 /lampac/wwwroot/plugins/twitch_plugin.js
-прроверил http://192.168.0.88:9118/plugins/twitch_plugin.js открывается
-сделал docker exec -i 5c16004ca197 sed -i '$ s/}/,\n  "Twitch": {\n    "enabled": true,\n    "client_id": "kd1unb4b3q4t58fwlpcbzcbnm76a8fp"\n  }\n}/' /lampac/current.conf
-docker exec -u root 5c16004ca197 chown root:root /lampac/current.conf
-docker exec -u root 5c16004ca197 chmod 666 /lampac/current.conf
-docker restart 5c16004ca197
-но ответ http://192.168.0.88:9118/lite/twitch : Запрошенная страница не найдена. [404]

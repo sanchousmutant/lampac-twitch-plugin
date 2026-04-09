@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  lampac:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: lampac-twitch
+    ports:
+      - "9118:9118"
+    volumes:
+      - lampac-data:/app/cache
+    restart: unless-stopped
+    networks:
+      - lampac-network
+
+networks:
+  lampac-network:
+    driver: bridge
+
+volumes:
+  lampac-data:

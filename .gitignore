@@ -8,6 +8,7 @@ node_modules/
 # Логи сервера
 logs/
 *.log
+log.txt
 # Игнорируем ваш рабочий конфиг (в нем могут быть токены или пароли)
 current.conf
 # Временные файлы и кэш
@@ -30,7 +31,15 @@ Thumbs.db
 *.bak
 *.tmp
 
+# --- ВРЕМЕННЫЕ ФАЙЛЫ РАЗРАБОТКИ ---
+id.txt
+project.md
+*.png
+*.jpg
+*.jpeg
+httpsnb557.github.iopluginsonline_mod.js
+twitch_plugin.js
+
 Lampac/.playwright/
 Lampac/bin/
 Lampac/obj/
-current.conf
