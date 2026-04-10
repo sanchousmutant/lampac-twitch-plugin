@@ -91,6 +91,45 @@ docker compose build --no-cache
 docker compose up -d
 ```
 
+## WebOS LG (IPK приложение)
+
+Можно собрать приложение для телевизора LG на WebOS, которое при запуске сразу открывает Lampa с вашего сервера.
+
+### Установка инструментов
+
+```bash
+npm install -g @enact/cli @webos-tools/cli patch-package
+```
+
+### Настройка адреса сервера
+
+Откройте `webos-app/index.html` и замените `YOUR_SERVER_IP` на IP вашего сервера:
+
+```html
+window.location.replace("http://192.168.0.100:9118/");
+```
+
+### Сборка IPK
+
+```bash
+ares-package webos-app/
+```
+
+Будет создан файл `com.lampac.twitch_1.0.0_all.ipk`
+
+### Установка на телевизор
+
+1. Установите приложение **Developer Mode** из LG Content Store на телевизоре
+2. Включите Developer Mode и запомните IP телевизора
+
+```bash
+# Добавить телевизор
+ares-setup-device
+
+# Установить приложение
+ares-install com.lampac.twitch_1.0.0_all.ipk
+```
+
 ## Лицензия
 
 См. оригинальный проект Lampac https://github.com/lampac-talks/lampac

@@ -43,3 +43,6 @@ twitch_plugin.js
 Lampac/.playwright/
 Lampac/bin/
 Lampac/obj/
+
+# --- WebOS IPK ---
+*.ipk

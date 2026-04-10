@@ -1,23 +1,8 @@
-# Развертывание Lampac с Twitch плагином на OpenMediaVault
+# Развертывание Lampac с Twitch плагином на сервере
 
-## Что создано
+## Развертывание на сервере
 
-- `Dockerfile` - образ для сборки Lampac с вашим кодом
-- `docker compose.yml` - конфигурация для запуска
-- `.dockerignore` - исключения для оптимизации сборки
-
-## Подготовка на вашем ПК
-
-### 1. Закоммитьте изменения в Git
-```bash
-git add .
-git commit -m "Add Twitch plugin and Docker setup"
-git push origin main
-```
-
-## Развертывание на OpenMediaVault сервере
-
-### 2. Подключитесь к серверу по SSH
+### 1. Подключитесь к серверу по SSH
 ```bash
 ssh your-user@your-openmediavault-ip
 ```
