@@ -37,6 +37,10 @@ project.md
 *.png
 *.jpg
 *.jpeg
+# Разрешаем изображения в webos-app
+!webos-app/*.png
+!webos-app/*.jpg
+!webos-app/*.jpeg
 httpsnb557.github.iopluginsonline_mod.js
 twitch_plugin.js
 
